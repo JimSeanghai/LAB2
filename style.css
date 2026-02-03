@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Background container */
+.background {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full screen height */
+}
+
+/* Background image */
+.ig {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;      /* Fill screen, keep aspect ratio */
+    object-position: center;
+
+    z-index: 0;
+}
+
+/* Text on top of image */
+.content {
+    position: absolute;
+    top: 25%;
+    left: 15%;
+    color: rgb(13, 141, 13);
+    z-index: 2;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.content h1 {
+    font-size: 55px;
+}
+
+.content p {
+    font-size: 25px;
+}
+
+.content button {
+    margin-top: 10px;
+    padding: 8px 16px;
+    background: #4f46e5;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Form box */
+/* Form box */
+.form-box {
+    position: absolute;
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+
+    z-index: 1;
+
+    width: 60%;
+    max-width: 450px;
+
+    /* Melted form background */
+    background: rgba(255, 255, 255, 0.3); /* 30% opaque → 70% visible background */
+
+    padding: 30px;
+    border-radius: 12px;
+
+    /* Shadow to make text more readable */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* Make form inputs normal (fully opaque) */
+.form-box input,
+.form-box select,
+.form-box textarea {
+    background: white;      /* normal background */
+    color: black;
+    border: 1px solid #ccc;
+    padding: 8px;
+    margin-top: 8px;
+    width: 100%;
+    border-radius: 6px;
+}
+/* Navbar */
+.navbar {
+    position: fixed;       /* Stay on top when scrolling */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;           /* Above everything */
+
+    background: rgba(255, 255, 255, 0.7); /* 70% visible white */
+    backdrop-filter: blur(5px);           /* Optional: glassy blur */
+
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* Slight shadow */
+    padding: 12px 20px;
+}
+
+/* Navbar container */
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Logo */
+.navbar .logo {
+    font-weight: bold;
+    font-size: 20px;
+    color: #4f46e5; /* Indigo color */
+}
+
+/* Links */
+.navbar .links a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.navbar .links a:hover {
+    color: #4f46e5; /* Hover color matches logo */
+}
